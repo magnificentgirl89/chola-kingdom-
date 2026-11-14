@@ -33,6 +33,16 @@ Make historically grounded 3D models of four Chola sites and use them for:
 5. **Lighting and FX:** volumetrics, godrays, particles, Living and Lost variants.
 6. **Shots:** animated cameras, renders, edit with music and sound.
 
+## Method (from the Gizmo Labs reference guide)
+Source: https://gizmo-labs.com/guides/claude-code-blender-model-from-image/
+- **Image gives the look, published measurements give the sizes.** Where they disagree, the numbers win. Keep a size table with a source for each number (`docs/measurements.md`) and mark guesses.
+- **Build one repeating unit, finished, first.** Examples: one tala bay of the Thanjavur vimana, one Darasuram chariot-mandapa pillar bay, one gopuram tier. Then repeat it by code.
+- **Fixed cameras for the whole project.** Every step renders the same views as a gray "clay" pass (shape only, seconds), then with materials, set beside the reference photo.
+- **Tests on the geometry:** count talas, kutas and pillars; no holes from above; normals face out.
+- **Materials:** CC0 textures (Poly Haven, ambientCG), graded to the reference colours, with wear added in code (rain streaks under ledges, darker bases, a different tint per stone, bevels so edges catch the sun).
+- **Detail:** sculpture (yalis, Nandi, dvarapalas) from scans or image-to-3D, placed and varied by code.
+- **One plan file per part** with its brief, renders and notes, so any new session can carry on where the last one stopped.
+
 ## What I need from you
 See the "Inputs" checklist in the chat or the list below. Tick items off as they arrive.
 - [ ] The **reference guide** you mentioned (it didn't come through in the message)
